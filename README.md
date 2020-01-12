@@ -136,7 +136,7 @@ They can be compared to *Helm Charts*.
  
 
  
-#### [Kubernetes](https://kubernetes.iou)
+#### [Kubernetes](https://kubernetes.io)
 
 
 
