@@ -1,0 +1,12 @@
+name: Prometheus
+url: https://prometheus.io
+modules:
+  - name: kube-prometheus
+    import: github.com/coreos/kube-prometheus/jsonnet/kube-prometheus
+    maintainer: CoreOS
+  - name: prometheus-ksonnet
+    maintainer: Grafana Labs
+    import: github.com/grafana/jsonnet-libs/prometheus-ksonnet
+mixins:
+  - import: github.com/prometheus/prometheus/documentation/prometheus-mixin
+    maintainer: project

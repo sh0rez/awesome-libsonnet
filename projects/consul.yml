@@ -1,0 +1,8 @@
+name: HashiCorp Consul
+url: https://consul.io
+modules:
+  - import: github.com/grafana/jsonnet-libs/consul
+    maintainer: Grafana Labs
+mixins:
+  - import: github.com/grafana/jsonnet-libs/consul-mixin
+    maintainer: Grafana Labs

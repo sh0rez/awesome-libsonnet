@@ -1,0 +1,5 @@
+name: CoreOS etcd-operator
+url: https://github.com/coreos/etcd-operator
+modules:
+  - import: github.com/grafana/jsonnet-libs/etcd-operator
+    maintainer: Grafana Labs

@@ -1,0 +1,8 @@
+name: memcached
+url: https://memcached.org
+modules:
+  - import: github.com/grafana/jsonnet-libs/memcached
+    maintainer: Grafana Labs
+mixins:
+  - import: github.com/grafana/jsonnet-libs/memcached-mixin
+    maintainer: Grafana Labs

@@ -1,0 +1,5 @@
+name: Jaeger
+url: https://jaegertracing.com
+mixins:
+  - import: github.com/jaegertracing/jaeger/monitoring/jaeger-mixin
+    maintainer: project

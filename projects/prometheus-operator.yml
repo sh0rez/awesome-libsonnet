@@ -1,0 +1,5 @@
+name: CoreOS prometheus-operator
+url: https://github.com/coreos/prometheus-operator
+modules:
+  - import: github.com/coreos/prometheus-operator/jsonnet/prometheus-operator
+    maintainer: project

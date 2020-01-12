@@ -1,0 +1,13 @@
+name: Grafana Loki
+url: https://grafana.com/loki
+description: ""
+modules:
+  - name: Loki
+    import: github.com/grafana/loki/production/ksonnet/loki
+    maintainer: project
+  - name: Promtail
+    import: github.com/grafana/loki/production/ksonnet/promtail
+    maintainer: project
+  - name: Canary
+    import: github.com/grafana/loki/production/ksonnet/loki-canary
+    maintainer: project

@@ -1,0 +1,45 @@
+{{ define "module" }}
+#### [{{.Name}}]({{.URL}})
+{{ .Description }}
+{{ template "package" .Modules}}
+{{ end }}
+
+{{ define "mixin" }}
+#### [{{.Name}}]({{.URL}})
+{{ .Description }}
+{{ template "package" .Mixins}}
+{{ end }}
+
+{{ define "package" }}
+{{ range . }}
+* {{.Maintainer}} {{ if .Name }} {{ .Name }}: {{ end }}[`{{ .Import }}`]({{ .URL }}){{ if .Description }}: {{.Description}}{{end}}
+{{ end }}
+{{ end }}
+
+# Awesome libsonnet
+A curated, Kubernetes focused list of Jsonnet resources. For a more general list
+of Jsonnet related things, make sure to check out
+[metalmatze/awesome-jsonnet](https://github.com/metalmatze/awesome-jsonnet).
+
+A core feature of Jsonnet, `import`, allows easy sharing and reusing of code.
+Currently available libraries can be grouped by different types:
+
+* [**Modules**](#application-modules) provide Kubernetes API resources to install entire Applications.
+They can be compared to *Helm Charts*.
+* [**Mixins**](#configuration-mixins) usually provide only configuration of some kind. This can be for example *Grafana dashboards*, *Prometheus alerts*, etc
+<!-- * **Helpers** are abstract libraries that don't produce anything on their own, but can ease your life. The most prominent example is [`k.libsonnet`](https://github.com/ksonnet/ksonnet-lib). -->
+
+| Maintained by: | :crown: Project maintainers | :busts_in_silhouette: Community | :no_entry: Unmaintained |
+|----------------|-----------------------------|---------------------------------|-------------------------|
+
+## Application modules
+
+{{ range .Projects }}
+{{if .Modules}} {{ template "module" . }} {{end}}
+{{ end }}
+
+## Configuration mixins
+
+{{ range .Projects }}
+{{if .Mixins}} {{ template "mixin" . }} {{end}}
+{{ end }}

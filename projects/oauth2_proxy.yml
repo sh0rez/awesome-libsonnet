@@ -1,0 +1,5 @@
+name: Bitly oauth2_proxy
+url: https://github.com/bitly/oauth2_proxy
+modules:
+  - import: github.com/grafana/jsonnet-libs/oauth2-proxy
+    maintainer: Grafana Labs
